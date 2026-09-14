@@ -5,8 +5,8 @@ Personal workspace for managing job applications: tracking applications, tailori
 ## First Instructions for Your Agent
 
 1. **It is important for your agent to create the `CV_Content.md` and a template for your CV.** Everything else depends on these two files:
-   - `Backend_JobApplication/Infastructure/AI/00_Templates/CV_Content.md` — the master content library (profile sentences, skills, per-company bullet points). The agent pulls from it when tailoring a CV and must never invent roles, employers, or achievements that aren't in it.
-   - `Backend_JobApplication/Infastructure/AI/00_Templates/<YourName>_CV_<LANG>.docx` — the base CV template (e.g. `RodLabarete_CV_EN.docx`). Every tailored CV the agent produces follows this format.
+   - `Backend_JobApplication/Infastructure/AI/00_Templates/CV_Content.md` is the master content library (profile sentences, skills, per-company bullet points). The agent pulls from it when tailoring a CV and must never invent roles, employers, or achievements that aren't in it.
+   - `Backend_JobApplication/Infastructure/AI/00_Templates/<YourName>_CV_<LANG>.docx` is the base CV template (e.g. `RodLabarete_CV_EN.docx`). Every tailored CV the agent produces follows this format.
 2. Keep both trackers in sync: `Tracker.md` (agent-editable) and `Tracker.xlsx` (Excel copy). After any change, the agent must explicitly tell you what to mirror in Excel.
 3. Paste a job-description link and the agent creates a folder for it, runs an ATS success-rate assessment (following `00_Templates/ATS_Assessment_Template.md`), and saves the full assessment as an md file.
 
@@ -20,7 +20,7 @@ Personal workspace for managing job applications: tracking applications, tailori
 ## Folder Conventions
 
 - `00_Templates/` — reusable source material (CV content library, CV template, assessment template). Never put application-specific files here.
-- `01_InProgress/` … `06_Ghosted/` — pipeline stages mirroring the application statuses.
+- `01_InProgress/` … `06_Ghosted/` are the pipeline stages mirroring the application statuses.
 - Valid statuses: `In Progress` · `ATS success rate` · `Submitted` · `Interview` · `Offer` · `Rejected` · `Withdrawn`.
 - Dates are ISO `YYYY-MM-DD`.
 
