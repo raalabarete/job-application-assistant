@@ -1,0 +1,36 @@
+<main>
+  <h1>{{ title }}</h1>
+
+  <h2>Weather forecast (from Backend_JobApplication)</h2>
+
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+
+  @if (!error && forecasts.length === 0) {
+    <p>Loading…</p>
+  }
+
+  @if (forecasts.length > 0) {
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Temp. (°C)</th>
+          <th>Temp. (°F)</th>
+          <th>Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (forecast of forecasts; track forecast.date) {
+          <tr>
+            <td>{{ forecast.date }}</td>
+            <td>{{ forecast.temperatureC }}</td>
+            <td>{{ forecast.temperatureF }}</td>
+            <td>{{ forecast.summary }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</main>

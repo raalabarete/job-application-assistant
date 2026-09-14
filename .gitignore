@@ -1,0 +1,18 @@
+# Python virtual environment
+.venv/
+
+# Office lock / temp files
+~$*
+*.tmp
+*.docx
+*.xlsx
+
+# Windows OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+Backend_JobApplication/Infastructure/AI/02_Submitted/*
+
+# Specific Files
+RodLabarete_CV_EN.docx
