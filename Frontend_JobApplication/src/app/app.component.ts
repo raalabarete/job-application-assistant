@@ -1,10 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
 
-import { WeatherForecast } from './models/weather-forecast.model';
+import { WeatherForecastModel } from './models/weather-forecast.model';
 import { WeatherService } from './services/weather.service';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -13,7 +15,7 @@ export class AppComponent implements OnInit {
 
   private readonly weatherService = inject(WeatherService);
 
-  forecasts: WeatherForecast[] = [];
+  forecasts: WeatherForecastModel[] = [];
   error: string | null = null;
 
   ngOnInit(): void {
